@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Upload de Arquivos XML</h2>
+  
+  <input type="file" (change)="onFileSelected($event)" #fileInput multiple accept=".xml">
+
+  <!-- Botão de upload com mat-spinner -->
+  <button mat-raised-button class="upload-button" (click)="uploadFile()">
+    <span class="mat-button-wrapper">Upload</span>
+    <mat-spinner class="spinner" *ngIf="isUploading" [diameter]="24"></mat-spinner>
+  </button>
+
+  <!-- Lista de arquivos selecionados -->
+  <div class="file-list" *ngIf="selectedFiles.length > 0">
+    <h3>Arquivos Selecionados:</h3>
+    <ul>
+      <li *ngFor="let file of selectedFiles">{{ file.name }}</li>
+    </ul>
+  </div>
+</div>

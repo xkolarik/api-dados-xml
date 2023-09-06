@@ -1,0 +1,47 @@
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .file-list {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+/* Estilo do botão de upload */
+.upload-button {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    position: relative; /* Adicione position: relative; para posicionar o spinner */
+  }
+  
+  .upload-button .mat-button-wrapper {
+    margin-right: 15px;
+    transition: opacity 0.2s;
+  }
+  
+  .upload-button .mat-icon {
+    position: absolute;
+    right: 0; /* Posicione o ícone à direita do botão */
+  }
+  
+  .upload-button:hover .mat-button-wrapper {
+    opacity: 0;
+  }
+  
+  /* Estilo do mat-spinner no botão de upload */
+  .spinner {
+    color: white;
+    position: absolute; /* Adicione position: absolute; para posicionar o spinner */
+    left: calc(100% + 5px); /* Posicione o spinner à direita do texto do botão */
+  }
+  
